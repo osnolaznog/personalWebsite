@@ -1,0 +1,32 @@
+header {
+    width:100%;
+    padding: 20px 20px 0;
+    display:flex;
+    justify-content: space-between;
+
+    nav {
+        display:flex;
+        justify-content:flex-end;
+        height:inherit;
+
+        ul {
+            width:200px;
+            height:auto;
+            display:flex;
+            justify-content:space-between;
+            align-items:center;
+
+            li {
+                text-decoration: none;
+                list-style: none;
+
+                a {
+                    text-decoration: none;
+                    text-transform: uppercase;
+                    font-family:$font-main;
+                    color: $primary-color-100;
+                }
+            }
+        }
+    }
+}

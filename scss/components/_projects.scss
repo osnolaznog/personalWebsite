@@ -1,0 +1,57 @@
+
+.projects {
+    background-image:url('../assets/images/empty-circles.svg');
+    background-position-x: 2.5%;
+    background-position-y:bottom;
+    background-repeat:no-repeat;
+    background-size:162px;
+    padding-bottom:56px;
+    
+    &-container {
+        width:90%;
+        margin: 0 auto;
+        position: relative;
+        h2 {
+            @include section-titles;
+        }
+    }
+    &-portfolio {
+        width:90%;
+        margin:32px auto 0;
+        display: grid; 
+        grid-template-columns: repeat(2, 1fr); 
+        grid-template-rows: repeat(3, 160px); 
+        gap: 16px 16px;  
+        grid-template-areas: 
+          "latest-project latest-project"
+          "project-1 project-2"
+          "project-3 project-4"; 
+        > * {
+            border-radius:8px;
+        }
+        .latest-project {
+            background-image: $gradient-main;
+            grid-area: latest-project;
+        }
+
+        .project-1 {
+            background-image: $gradient-secondary;
+            grid-area: project-1;
+        }
+        
+        .project-2 {
+            background-image: $gradient-terciary;
+            grid-area: project-2;
+        }
+        
+        .project-3 {
+            background-image: $gradient-complimentary;
+            grid-area: project-3;
+        }
+        
+        .project-4 {
+            background-image: $gradient-main;
+            grid-area: project-4;;
+        }
+    }
+}

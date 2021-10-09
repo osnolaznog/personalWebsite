@@ -1,0 +1,36 @@
+//
+//  1. Position: fixed, relative, absolute
+//  2. Box Model: margin, padding, width
+//  3. Fonts: fuentes, tamaños, colores
+//  4. Visuals: shadow box, border radius
+//  5. Others
+//
+
+*, :before,:after  {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    background:$background;
+    background-image:url('../assets/images/blob.svg');
+    background-repeat: no-repeat;
+    background-position: top right;
+   // @include elevation($bg-elevation-00, $fx-elevation-00);
+}
+
+
+button {
+  padding: 0;
+  border: none;
+  font: inherit;
+  color: inherit;
+  background-color: transparent;
+  cursor: pointer;
+}
+

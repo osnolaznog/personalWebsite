@@ -1,0 +1,13 @@
+-var menu = [{name: "About me", url: "#about-me"}, {name: "Projects", url: "#projects"}, {name: "Contact me", url: "#contact"}]
+//-create mixins for skils -> mixin skills (image, skill)-> indento codigo abajo [img(src="images/"+image) // h5=skill] --- lo llamo como +skills
+
+mixin skills (skillName, skillNumber, percentage)
+    div(class=[`skill skill-${skillNumber}`])
+        svg(class=[`radial-progress logo-${skillNumber}`], data-percentage= percentage, viewBox="0 0 80 80")
+            circle.incomplete(cx="40", cy="40", r="35") 
+            circle.complete(cx="40", cy="40", r="35", style="stroke-dashoffset: 39.58406743523136;")
+        img(src='../assets/icons/skills-'+skillName+'.svg')(class=[`logo-${skillNumber}`])
+        
+        div(class=[`label label-${skillNumber}`])
+            p.label-skill= (`${skillName}`)
+            text.label-percentage(x="50%", y="57%", transform="matrix(0, 1, -1, 0, 80, 0)")= percentage+'%'

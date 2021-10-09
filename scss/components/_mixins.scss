@@ -1,0 +1,49 @@
+@mixin elevation ($bg-elevation, $fx-elevation) {
+    background-color: $bg-elevation;
+    box-shadow: $fx-elevation;
+}
+
+%h1-titles {
+    font-size: $h1;
+    font-family: $font-main;
+}
+
+@mixin section-titles {
+    font-family:$font-main;
+    font-size:$h2;
+    text-transform:lowercase;
+    line-height:$lh-h2;
+    color:$secondary-color-050;
+
+    .section-title--accent {
+        color:$secondary-color-500;
+        padding-left:48px;
+    }
+}
+
+@mixin new-skill ($skillNumber) {
+    
+    .skill-#{$skillNumber}{
+        grid-template-areas: 
+          ("logo-" + #{$skillNumber})
+          ("label-" + #{$skillNumber});
+        grid-area: (skill- + #{$skillNumber});
+        
+        .logo-#{$skillNumber}{
+            grid-area: (logo- + #{$skillNumber});
+            position: relative;
+            display: flex;
+            flex-flow: wrap;
+            align-items: center;
+            justify-content: center;
+
+            img { 
+                position:absolute;
+            }
+        }
+
+        .label-#{$skillNumber} { 
+            grid-area: (label- + #{$skillNumber});
+        }
+    }
+}

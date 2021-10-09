@@ -1,0 +1,280 @@
+//   ____   __   ____  __  ___     ___  __   __     __  ____  ____ 
+//  (  _ \ / _\ / ___)(  )/ __)   / __)/  \ (  )   /  \(  _ \/ ___)
+//   ) _ (/    \\___ \ )(( (__   ( (__(  O )/ (_/\(  O ))   /\___ \
+//  (____/\_/\_/(____/(__)\___)   \___)\__/ \____/ \__/(__\_)(____/
+//
+$background:#002329;
+$just-white:#ffffff;
+$outline:rgba(255, 255, 255, 0.12);
+
+
+//   ____  ____  __  _  _   __   ____  _  _     ___  __   __     __  ____  ____ 
+//  (  _ \(  _ \(  )( \/ ) / _\ (  _ \( \/ )   / __)/  \ (  )   /  \(  _ \/ ___)
+//   ) __/ )   / )( / \/ \/    \ )   / )  /   ( (__(  O )/ (_/\(  O ))   /\___ \
+//  (__)  (__\_)(__)\_)(_/\_/\_/(__\_)(__/     \___)\__/ \____/ \__/(__\_)(____/
+//
+$primary-color-100: #EBFAFA;
+$primary-color-200: #9BE5E5;
+$primary-color-300: #68D9D9;
+$primary-color-400: #36CCCC;
+$primary-color-500: #04BFBF;
+$primary-color-600: #039999;
+$primary-color-700: #027373;
+$primary-color-800: #024C4C;
+$primary-color-900: #012828;
+
+
+//   ____  ____  ___  __   __ _  ____   __   ____  _  _     ___  __   __     __  ____  ____ 
+//  / ___)(  __)/ __)/  \ (  ( \(    \ / _\ (  _ \( \/ )   / __)/  \ (  )   /  \(  _ \/ ___)
+//  \___ \ ) _)( (__(  O )/    / ) D (/    \ )   / )  /   ( (__(  O )/ (_/\(  O ))   /\___ \
+//  (____/(____)\___)\__/ \_)__)(____/\_/\_/(__\_)(__/     \___)\__/ \____/ \__/(__\_)(____/
+//
+$secondary-color-050:#FEE7F1;
+$secondary-color-100:#FDD0E4;
+$secondary-color-200:#FBA1C9;
+$secondary-color-300:#FA71AF;
+$secondary-color-400:#F84294;
+$secondary-color-500:#F61379;
+$secondary-color-600:#C50F61;
+$secondary-color-700:#940B49;
+$secondary-color-800:#620830;
+$secondary-color-900:#310418;
+
+
+//   ____  ____  ____   ___  __   __   ____  _  _     ___  __   __     __  ____  ____ 
+//  (_  _)(  __)(  _ \ / __)(  ) / _\ (  _ \( \/ )   / __)/  \ (  )   /  \(  _ \/ ___)
+//    )(   ) _)  )   /( (__  )( /    \ )   / )  /   ( (__(  O )/ (_/\(  O ))   /\___ \
+//   (__) (____)(__\_) \___)(__)\_/\_/(__\_)(__/     \___)\__/ \____/ \__/(__\_)(____/
+//
+$terciary-color-100: #FEF5CF;
+$terciary-color-200: #FDEA9F;
+$terciary-color-300: #FCE06F;
+$terciary-color-400: #FBD53F;
+$terciary-color-500: #FACB0F;
+$terciary-color-600: #C8A20C;
+$terciary-color-700: #967A09;
+$terciary-color-800: #645106;
+$terciary-color-900: #322903;
+
+
+//    ___  __   _  _  ____  __    __  _  _  ____  __ _  ____  __   ____  _  _     ___  __   __     __  ____  ____ 
+//   / __)/  \ ( \/ )(  _ \(  )  (  )( \/ )(  __)(  ( \(_  _)/ _\ (  _ \( \/ )   / __)/  \ (  )   /  \(  _ \/ ___)
+//  ( (__(  O )/ \/ \ ) __// (_/\ )( / \/ \ ) _) /    /  )( /    \ )   / )  /   ( (__(  O )/ (_/\(  O ))   /\___ \
+//   \___)\__/ \_)(_/(__)  \____/(__)\_)(_/(____)\_)__) (__)\_/\_/(__\_)(__/     \___)\__/ \____/ \__/(__\_)(____/
+//
+$complimentary-color-100: #E7CDE0;
+$complimentary-color-200: #CF9AC1;
+$complimentary-color-300: #B668A3;
+$complimentary-color-400: #9E3584;
+$complimentary-color-500: #860365;
+$complimentary-color-600: #6B0251;
+$complimentary-color-700: #50023D;
+$complimentary-color-800: #360128;
+$complimentary-color-900: #1B0114;
+
+
+//   __ _  ____  _  _  ____  ____   __   __       ___  __   __     __  ____  ____ 
+//  (  ( \(  __)/ )( \(_  _)(  _ \ / _\ (  )     / __)/  \ (  )   /  \(  _ \/ ___)
+//  /    / ) _) ) \/ (  )(   )   //    \/ (_/\  ( (__(  O )/ (_/\(  O ))   /\___ \
+//  \_)__)(____)\____/ (__) (__\_)\_/\_/\____/   \___)\__/ \____/ \__/(__\_)(____/
+//
+$neutral-color-100: #E6E9EA;
+$neutral-color-200: #B3BDBF;
+$neutral-color-300: #809194;
+$neutral-color-400: #4D6569;
+$neutral-color-500: #002329;
+$neutral-color-600: #001C21;
+$neutral-color-700: #001519;
+$neutral-color-800: #000E10;
+$neutral-color-900: #000708;
+
+
+//   ____  ____  ____   __  ____     ___  __   __     __  ____  ____ 
+//  (  __)(  _ \(  _ \ /  \(  _ \   / __)/  \ (  )   /  \(  _ \/ ___)
+//   ) _)  )   / )   /(  O ))   /  ( (__(  O )/ (_/\(  O ))   /\___ \
+//  (____)(__\_)(__\_) \__/(__\_)   \___)\__/ \____/ \__/(__\_)(____/
+//
+$system-error-color-100: #FFD6DA;
+$system-error-color-200: #FFACB6;
+$system-error-color-300: #FF8391;
+$system-error-color-400: #FF596D;
+$system-error-color-500: #FF3048;
+$system-error-color-600: #CC263A;
+$system-error-color-700: #991D2B;
+$system-error-color-800: #66131D;
+$system-error-color-900: #4C0E16;
+
+
+//   _  _   __   ____  __ _  __  __ _   ___     ___  __   __     __  ____  ____ 
+//  / )( \ / _\ (  _ \(  ( \(  )(  ( \ / __)   / __)/  \ (  )   /  \(  _ \/ ___)
+//  \ /\ //    \ )   //    / )( /    /( (_ \  ( (__(  O )/ (_/\(  O ))   /\___ \
+//  (_/\_)\_/\_/(__\_)\_)__)(__)\_)__) \___/   \___)\__/ \____/ \__/(__\_)(____/
+//
+$system-warning-color-100: #FDFACF;
+$system-warning-color-200: #FCF4A0;
+$system-warning-color-300: #FAEF70;
+$system-warning-color-400: #F9E941;
+$system-warning-color-500: #F7E411;
+$system-warning-color-600: #C6B60E;
+$system-warning-color-700: #94890A;
+$system-warning-color-800: #635B07;
+$system-warning-color-900: #4A4405;
+
+
+//   ____  _  _   ___  ___  ____  ____  ____     ___  __   __     __  ____  ____ 
+//  / ___)/ )( \ / __)/ __)(  __)/ ___)/ ___)   / __)/  \ (  )   /  \(  _ \/ ___)
+//  \___ \) \/ (( (__( (__  ) _) \___ \\___ \  ( (__(  O )/ (_/\(  O ))   /\___ \
+//  (____/\____/ \___)\___)(____)(____/(____/   \___)\__/ \____/ \__/(__\_)(____/
+//
+$system-success-color-100: #D4F8DD;
+$system-success-color-200: #A9F1BC;
+$system-success-color-300: #7DE99A;
+$system-success-color-400: #52E279;
+$system-success-color-500: #27DB57;
+$system-success-color-600: #1FAF46;
+$system-success-color-700: #178334;
+$system-success-color-800: #105823;
+$system-success-color-900: #0C421A;
+
+
+//    __  __ _  ____  __      ___  __   __     __  ____  ____ 
+//   (  )(  ( \(  __)/  \    / __)/  \ (  )   /  \(  _ \/ ___)
+//    )( /    / ) _)(  O )  ( (__(  O )/ (_/\(  O ))   /\___ \
+//   (__)\_)__)(__)  \__/    \___)\__/ \____/ \__/(__\_)(____/
+//
+$system-info-color-100: #D1E5FE;
+$system-info-color-200: #A3CCFE;
+$system-info-color-300: #75B2FD;
+$system-info-color-400: #4799FD;
+$system-info-color-500: #197FFC;
+$system-info-color-600: #1466CA;
+$system-info-color-700: #0F4C97;
+$system-info-color-800: #0A3365;
+$system-info-color-900: #07264C;
+
+
+//    ___  ____   __   ____  __  ____  __ _  ____  ____     ___  __   __     __  ____  ____ 
+//   / __)(  _ \ / _\ (    \(  )(  __)(  ( \(_  _)/ ___)   / __)/  \ (  )   /  \(  _ \/ ___)
+//  ( (_ \ )   //    \ ) D ( )(  ) _) /    /  )(  \___ \  ( (__(  O )/ (_/\(  O ))   /\___ \
+//   \___/(__\_)\_/\_/(____/(__)(____)\_)__) (__) (____/   \___)\__/ \____/ \__/(__\_)(____/
+//
+$gradient-main: linear-gradient(137.08deg, #68B7C0 0%, #58A7B1 19.33%, #4798A2 38.65%, #358994 57.98%, #217A86 77.3%, #026C78 96.63%);
+$gradient-secondary: linear-gradient(137.08deg, #FA71AF 0%, #F0619F 19.33%, #E5518F 38.65%, #DB407F 57.98%, #D02C70 77.3%, #C50F61 96.63%);
+$gradient-terciary: linear-gradient(137.08deg, #FDEA9F 0%, #FEE488 19.33%, #FEDD71 38.65%, #FDD758 57.98%, #FCD13C 77.3%, #FACB0F 96.63%);
+$gradient-complimentary: linear-gradient(137.08deg, #B668A3 0%, #A75692 19.33%, #984481 38.65%, #893271 57.98%, #7A1E61 77.3%, #6B0251 96.63%);
+$gradient-radial:radial-gradient(138.53% 171.34% at 49.78% 49.78%, #004E5C 0%, #002329 100%);
+
+
+//     ____  __    ____  _  _   __   ____   __    __   __ _ 
+//    (  __)(  )  (  __)/ )( \ / _\ (_  _) (  )  /  \ (  ( \
+//     ) _) / (_/\ ) _) \ \/ //    \  )(    )(  (  O )/    /
+//    (____)\____/(____) \__/ \_/\_/ (__)  (__)  \__/ \_)__)
+//
+$bg-elevation-00: #002329; 
+$bg-elevation-01: #0D2E34; 
+$bg-elevation-02: #123238; 
+$bg-elevation-03: #14353A; 
+$bg-elevation-04: #17373C; 
+$bg-elevation-06: #1C3B41; 
+$bg-elevation-08: #1F3D43; 
+$bg-elevation-12: #244247; 
+$bg-elevation-16: #264449; 
+$bg-elevation-24: #29464B; 
+
+
+//     ___  _   _    __    ____   _____  _    _  ___ 
+//    / __)( )_( )  /__\  (  _ \ (  _  )( \/\/ )/ __)
+//    \__ \ ) _ (  /(__)\  )(_) ) )(_)(  )    ( \__ \
+//    (___/(_) (_)(__)(__)(____/ (_____)(__/\__)(___/
+//
+$shadow-key-umbra:rgba(0, 0, 0, 0.2);
+$shadow-key-penumbra:rgba(0, 0, 0, 0.14);
+$shadow-ambient-shadow: rgba(0, 0, 0, 0.12);
+
+$fx-elevation-00: 
+    0px 1px 1px 0px $shadow-key-umbra, 
+    0px 1px 1px 0px $shadow-key-penumbra, 
+    0px 2px 1px -1px $shadow-ambient-shadow;
+
+$fx-elevation-01:  
+    0px 1px 3px 0px $shadow-key-umbra, 
+    0px 1px 1px 0px $shadow-key-penumbra, 
+    0px 2px 1px -1px $shadow-ambient-shadow; 
+
+$fx-elevation-02:  
+    0px 1px 5px 0px $shadow-key-umbra, 
+    0px 2px 2px 0px $shadow-key-penumbra, 
+    0px 3px 1px -2px $shadow-ambient-shadow;
+
+$fx-elevation-03:  
+    0px 1px 8px 0px $shadow-key-umbra, 
+    0px 3px 4px 0px $shadow-key-penumbra, 
+    0px 3px 3px -2px $shadow-ambient-shadow;
+
+$fx-elevation-04:  
+    0px 2px 4px -1px $shadow-key-umbra, 
+    0px 4px 5px 0px $shadow-key-penumbra, 
+    0px 1px 10px 0px $shadow-ambient-shadow;
+
+$fx-elevation-06:  
+    0px 3px 5px -1px $shadow-key-umbra, 
+    0px 6px 10px 0px $shadow-key-penumbra, 
+    0px 1px 18px 0px $shadow-ambient-shadow;
+
+$fx-elevation-08:  
+    0px 5px 5px -3px $shadow-key-umbra, 
+    0px 8px 10px 1px $shadow-key-penumbra, 
+    0px 3px 14px 2px $shadow-ambient-shadow;
+
+$fx-elevation-12:  
+    0px 7px 8px -4px $shadow-key-umbra, 
+    0px 12px 17px 2px $shadow-key-penumbra, 
+    0px 5px 22px 4px $shadow-ambient-shadow;
+
+$fx-elevation-16:  
+    0px 8px 10px -5px $shadow-key-umbra, 
+    0px 16px 24px 2px $shadow-key-penumbra, 
+    0px 6px 30px 5px $shadow-ambient-shadow;
+
+$fx-elevation-24:  
+    0px 11px 15px -7px $shadow-key-umbra, 
+    0px 24px 38px 3px $shadow-key-penumbra, 
+    0px 9px 46px 8px $shadow-ambient-shadow;
+
+
+//   ____  __   __ _  ____  ____ 
+//  (  __)/  \ (  ( \(_  _)/ ___)
+//   ) _)(  O )/    /  )(  \___ \
+//  (__)  \__/ \_)__) (__) (____/
+//
+$font-main: 'Poppins', sans-serif;
+$font-secondary: 'Nunito', sans-serif;
+
+
+//   ____  __   __ _  ____  ____    _  _  ____  __  ___  _  _  ____  ____ 
+//  (  __)/  \ (  ( \(_  _)/ ___)  / )( \(  __)(  )/ __)/ )( \(_  _)/ ___)
+//   ) _)(  O )/    /  )(  \___ \  \ /\ / ) _)  )(( (_ \) __ (  )(  \___ \
+//  (__)  \__/ \_)__) (__) (____/  (_/\_)(____)(__)\___/\_)(_/ (__) (____/
+//
+$fw-regular:400;
+$fw-medium:500;
+$fw-semibold:600;
+$fw-bold:700;
+$fw-extrabold:800; 
+
+
+//   ____  __   __ _  ____  ____    ____  __  ____  ____  ____ 
+//  (  __)/  \ (  ( \(_  _)/ ___)  / ___)(  )(__  )(  __)/ ___)
+//   ) _)(  O )/    /  )(  \___ \  \___ \ )(  / _/  ) _) \___ \
+//  (__)  \__/ \_)__) (__) (____/  (____/(__)(____)(____)(____/
+//
+$h1:6.5rem;
+$h2:5.5rem;
+$body:1.4rem;
+$small:1.2rem;
+$label:1rem;
+
+
+$lh-h1: 7rem;
+$lh-h2: 5rem;
+$lh-body: 2rem;

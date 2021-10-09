@@ -1,0 +1,499 @@
+*, :before, :after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background: #002329;
+  background-image: url("../assets/images/blob.svg");
+  background-repeat: no-repeat;
+  background-position: top right;
+}
+
+button {
+  padding: 0;
+  border: none;
+  font: inherit;
+  color: inherit;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+header {
+  width: 100%;
+  padding: 20px 20px 0;
+  display: flex;
+  justify-content: space-between;
+}
+header nav {
+  display: flex;
+  justify-content: flex-end;
+  height: inherit;
+}
+header nav ul {
+  width: 200px;
+  height: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header nav ul li {
+  text-decoration: none;
+  list-style: none;
+}
+header nav ul li a {
+  text-decoration: none;
+  text-transform: uppercase;
+  font-family: "Poppins", sans-serif;
+  color: #EBFAFA;
+}
+
+.intro-title {
+  max-width: 90%;
+  margin: 0 auto;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-size: 6.5rem;
+  color: #FEE7F1;
+  line-height: 7rem;
+  margin-top: 56px;
+}
+.intro-title--accent {
+  color: #F61379;
+}
+.intro-title--remark {
+  font-weight: 800;
+}
+
+/* .about {
+    width: 90%;
+    margin: 28px auto 0;
+    position:relative;
+
+    &-circles {
+        width:140px;
+        height:140px;
+        position:absolute;
+        top:0;
+        right:0;
+        background-image:url('../assets/images/empty-circles.svg');
+        background-position: top right;
+        background-repeat:no-repeat;
+        background-size:contain;
+    }
+
+    &-image--container {
+        display:flex;
+        justify-content:flex-start;
+        box-shadow: $fx-elevation-04;
+        padding-top:56px;
+
+        img {
+            border-radius:8px;
+            width:279px;
+            height: 440px;
+            z-index:5;
+        }
+    }
+} */
+.about {
+  width: 90%;
+  margin: 28px auto 0;
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(2, 80px) 278px repeat(2, 80px) 1fr 0.5fr;
+  gap: 0px 12px;
+}
+.about-container--decoration-empty {
+  background-image: url("../assets/images/empty-circles.svg");
+  background-position: top right;
+  background-repeat: no-repeat;
+  background-size: contain;
+  grid-area: 1/4/3/7;
+}
+.about-picture {
+  display: flex;
+  justify-content: flex-start;
+  box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.2), 0px 4px 5px 0px rgba(0, 0, 0, 0.14), 0px 1px 10px 0px rgba(0, 0, 0, 0.12);
+  grid-area: 2/1/5/6;
+  width: 278px;
+  height: 438px;
+}
+.about-picture img {
+  border-radius: 8px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  z-index: 5;
+}
+.about-bio--container {
+  background: linear-gradient(0deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.08)), linear-gradient(0deg, rgba(0, 35, 41, 0.5), rgba(0, 35, 41, 0.5));
+  -webkit-backdrop-filter: blur(8px);
+          backdrop-filter: blur(8px);
+  box-shadow: 0px 5px 5px -3px rgba(0, 0, 0, 0.2), 0px 8px 10px 1px rgba(0, 0, 0, 0.14), 0px 3px 14px 2px rgba(0, 0, 0, 0.12);
+  border-radius: 8px;
+  border-top: 5px solid #04BFBF;
+  z-index: 10;
+  grid-area: 4/2/7/7;
+  padding: 32px 20px;
+}
+.about-bio--container h2 {
+  font-family: "Poppins", sans-serif;
+  font-size: 5.5rem;
+  text-transform: lowercase;
+  line-height: 5rem;
+  color: #FEE7F1;
+}
+.about-bio--container h2 .section-title--accent {
+  color: #F61379;
+  padding-left: 48px;
+}
+.about-bio--container p {
+  font-family: "Nunito", sans-serif;
+  font-size: 1.4rem;
+  line-height: 2rem;
+  font-weight: 400;
+  color: #EBFAFA;
+  margin-top: 32px;
+}
+.about-container--decoration-big {
+  background-image: url("../assets/images/big-circles.svg");
+  background-repeat: no-repeat;
+  transform: translate(20px, 60px);
+  grid-area: 6/4/8/7;
+  filter: drop-shadow(0px 1px 5px rgba(0, 0, 0, 0.2)), drop-shadow(0px 2px 2px rgba(0, 0, 0, 0.14)), drop-shadow(0px 3px 1px rgba(0, 0, 0, 0.12));
+}
+.about-container--networks {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 0.1fr 0.5fr 0.1fr 1fr;
+  gap: 0px 0px;
+  grid-template-areas: ". . . ." ". line . ." ". . . ." ". icons icons .";
+  grid-area: 5/1/7/2;
+}
+.about-container--networks--line {
+  grid-area: line;
+  border-right: 3px solid #FCE06F;
+}
+.about-container--networks--icons {
+  grid-area: icons;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+.about-container--networks--icons img {
+  min-width: 32px;
+}
+
+.projects {
+  background-image: url("../assets/images/empty-circles.svg");
+  background-position-x: 2.5%;
+  background-position-y: bottom;
+  background-repeat: no-repeat;
+  background-size: 162px;
+  padding-bottom: 56px;
+}
+.projects-container {
+  width: 90%;
+  margin: 0 auto;
+  position: relative;
+}
+.projects-container h2 {
+  font-family: "Poppins", sans-serif;
+  font-size: 5.5rem;
+  text-transform: lowercase;
+  line-height: 5rem;
+  color: #FEE7F1;
+}
+.projects-container h2 .section-title--accent {
+  color: #F61379;
+  padding-left: 48px;
+}
+.projects-portfolio {
+  width: 90%;
+  margin: 32px auto 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(3, 160px);
+  gap: 16px 16px;
+  grid-template-areas: "latest-project latest-project" "project-1 project-2" "project-3 project-4";
+}
+.projects-portfolio > * {
+  border-radius: 8px;
+}
+.projects-portfolio .latest-project {
+  background-image: linear-gradient(137.08deg, #68B7C0 0%, #58A7B1 19.33%, #4798A2 38.65%, #358994 57.98%, #217A86 77.3%, #026C78 96.63%);
+  grid-area: latest-project;
+}
+.projects-portfolio .project-1 {
+  background-image: linear-gradient(137.08deg, #FA71AF 0%, #F0619F 19.33%, #E5518F 38.65%, #DB407F 57.98%, #D02C70 77.3%, #C50F61 96.63%);
+  grid-area: project-1;
+}
+.projects-portfolio .project-2 {
+  background-image: linear-gradient(137.08deg, #FDEA9F 0%, #FEE488 19.33%, #FEDD71 38.65%, #FDD758 57.98%, #FCD13C 77.3%, #FACB0F 96.63%);
+  grid-area: project-2;
+}
+.projects-portfolio .project-3 {
+  background-image: linear-gradient(137.08deg, #B668A3 0%, #A75692 19.33%, #984481 38.65%, #893271 57.98%, #7A1E61 77.3%, #6B0251 96.63%);
+  grid-area: project-3;
+}
+.projects-portfolio .project-4 {
+  background-image: linear-gradient(137.08deg, #68B7C0 0%, #58A7B1 19.33%, #4798A2 38.65%, #358994 57.98%, #217A86 77.3%, #026C78 96.63%);
+  grid-area: project-4;
+}
+
+.skills h2 {
+  font-family: "Poppins", sans-serif;
+  font-size: 5.5rem;
+  text-transform: lowercase;
+  line-height: 5rem;
+  color: #FEE7F1;
+}
+.skills h2 .section-title--accent {
+  color: #F61379;
+  padding-left: 48px;
+}
+.skills .skills-container {
+  width: 90%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-rows: repeat(4, 0.8fr 0.2fr);
+  grid-template-columns: 50% 50%;
+  gap: 0px 16px;
+  grid-template-areas: "skill-1 skill-2" "skill-3 skill-4" "skill-5 skill-6" "skill-7 skill-8";
+  align-items: center;
+}
+.skills .skills-container .skill {
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  padding: 1.6rem;
+}
+.skills .skills-container .skill svg.radial-progress {
+  height: auto;
+  max-width: 200px;
+  transform: rotate(-90deg);
+  width: 100%;
+}
+.skills .skills-container .skill svg.radial-progress circle {
+  fill: rgba(0, 0, 0, 0);
+  stroke: #fff;
+  stroke-dashoffset: 219.9114857513;
+  /* Circumference */
+  stroke-width: 10;
+  stroke: #04BFBF;
+  filter: drop-shadow(0px 1px 5px rgba(0, 0, 0, 0.2)), drop-shadow(0px 2px 2px rgba(0, 0, 0, 0.14)), drop-shadow(0px 3px 1px rgba(0, 0, 0, 0.12));
+}
+.skills .skills-container .skill svg.radial-progress circle.incomplete {
+  opacity: 0.25;
+}
+.skills .skills-container .skill svg.radial-progress circle.complete {
+  stroke-dasharray: 219.9114857513;
+  /* Circumference */
+}
+.skills .skills-container .skill img {
+  max-height: 55px;
+  max-width: 70px;
+}
+.skills .skills-container .skill .label {
+  margin-top: 8px;
+  text-align: center;
+  font-family: "Nunito", sans-serif;
+}
+.skills .skills-container .skill .label .label-skill {
+  color: #04BFBF;
+  font-size: 1.4rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.skills .skills-container .skill .label .label-percentage {
+  color: #EBFAFA;
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+.skills .skills-container .skill-1 {
+  grid-template-areas: "logo-1" "label-1";
+  grid-area: skill-1;
+}
+.skills .skills-container .skill-1 .logo-1 {
+  grid-area: logo-1;
+  position: relative;
+  display: flex;
+  flex-flow: wrap;
+  align-items: center;
+  justify-content: center;
+}
+.skills .skills-container .skill-1 .logo-1 img {
+  position: absolute;
+}
+.skills .skills-container .skill-1 .label-1 {
+  grid-area: label-1;
+}
+.skills .skills-container .skill-2 {
+  grid-template-areas: "logo-2" "label-2";
+  grid-area: skill-2;
+}
+.skills .skills-container .skill-2 .logo-2 {
+  grid-area: logo-2;
+  position: relative;
+  display: flex;
+  flex-flow: wrap;
+  align-items: center;
+  justify-content: center;
+}
+.skills .skills-container .skill-2 .logo-2 img {
+  position: absolute;
+}
+.skills .skills-container .skill-2 .label-2 {
+  grid-area: label-2;
+}
+.skills .skills-container .skill-3 {
+  grid-template-areas: "logo-3" "label-3";
+  grid-area: skill-3;
+}
+.skills .skills-container .skill-3 .logo-3 {
+  grid-area: logo-3;
+  position: relative;
+  display: flex;
+  flex-flow: wrap;
+  align-items: center;
+  justify-content: center;
+}
+.skills .skills-container .skill-3 .logo-3 img {
+  position: absolute;
+}
+.skills .skills-container .skill-3 .label-3 {
+  grid-area: label-3;
+}
+.skills .skills-container .skill-4 {
+  grid-template-areas: "logo-4" "label-4";
+  grid-area: skill-4;
+}
+.skills .skills-container .skill-4 .logo-4 {
+  grid-area: logo-4;
+  position: relative;
+  display: flex;
+  flex-flow: wrap;
+  align-items: center;
+  justify-content: center;
+}
+.skills .skills-container .skill-4 .logo-4 img {
+  position: absolute;
+}
+.skills .skills-container .skill-4 .label-4 {
+  grid-area: label-4;
+}
+.skills .skills-container .skill-5 {
+  grid-template-areas: "logo-5" "label-5";
+  grid-area: skill-5;
+}
+.skills .skills-container .skill-5 .logo-5 {
+  grid-area: logo-5;
+  position: relative;
+  display: flex;
+  flex-flow: wrap;
+  align-items: center;
+  justify-content: center;
+}
+.skills .skills-container .skill-5 .logo-5 img {
+  position: absolute;
+}
+.skills .skills-container .skill-5 .label-5 {
+  grid-area: label-5;
+}
+.skills .skills-container .skill-6 {
+  grid-template-areas: "logo-6" "label-6";
+  grid-area: skill-6;
+}
+.skills .skills-container .skill-6 .logo-6 {
+  grid-area: logo-6;
+  position: relative;
+  display: flex;
+  flex-flow: wrap;
+  align-items: center;
+  justify-content: center;
+}
+.skills .skills-container .skill-6 .logo-6 img {
+  position: absolute;
+}
+.skills .skills-container .skill-6 .label-6 {
+  grid-area: label-6;
+}
+.skills .skills-container .skill-7 {
+  grid-template-areas: "logo-7" "label-7";
+  grid-area: skill-7;
+}
+.skills .skills-container .skill-7 .logo-7 {
+  grid-area: logo-7;
+  position: relative;
+  display: flex;
+  flex-flow: wrap;
+  align-items: center;
+  justify-content: center;
+}
+.skills .skills-container .skill-7 .logo-7 img {
+  position: absolute;
+}
+.skills .skills-container .skill-7 .label-7 {
+  grid-area: label-7;
+}
+.skills .skills-container .skill-8 {
+  grid-template-areas: "logo-8" "label-8";
+  grid-area: skill-8;
+}
+.skills .skills-container .skill-8 .logo-8 {
+  grid-area: logo-8;
+  position: relative;
+  display: flex;
+  flex-flow: wrap;
+  align-items: center;
+  justify-content: center;
+}
+.skills .skills-container .skill-8 .logo-8 img {
+  position: absolute;
+}
+.skills .skills-container .skill-8 .label-8 {
+  grid-area: label-8;
+}
+.skills .skills-container .skill-9 {
+  grid-template-areas: "logo-9" "label-9";
+  grid-area: skill-9;
+}
+.skills .skills-container .skill-9 .logo-9 {
+  grid-area: logo-9;
+  position: relative;
+  display: flex;
+  flex-flow: wrap;
+  align-items: center;
+  justify-content: center;
+}
+.skills .skills-container .skill-9 .logo-9 img {
+  position: absolute;
+}
+.skills .skills-container .skill-9 .label-9 {
+  grid-area: label-9;
+}
+.skills .skills-container .skill-10 {
+  grid-template-areas: "logo-10" "label-10";
+  grid-area: skill-10;
+}
+.skills .skills-container .skill-10 .logo-10 {
+  grid-area: logo-10;
+  position: relative;
+  display: flex;
+  flex-flow: wrap;
+  align-items: center;
+  justify-content: center;
+}
+.skills .skills-container .skill-10 .logo-10 img {
+  position: absolute;
+}
+.skills .skills-container .skill-10 .label-10 {
+  grid-area: label-10;
+}/*# sourceMappingURL=styles.css.map */

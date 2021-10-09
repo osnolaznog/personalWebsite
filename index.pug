@@ -1,0 +1,54 @@
+extend components/template.pug
+block content
+    main
+        h1.intro-title 
+            <span class="intro-title--accent">Hi!</span><br>
+            | 
+            | I’m Gonza 
+            | and I’m a 
+            | <span class="intro-title--remark">frontend 
+            | developer</span>
+        section.about
+            .about-container--decoration-empty
+            .about-picture
+                img(src="../assets/images/profile-picture.webp")
+            .about-bio--container
+                h2.section-title  
+                    | who <br>
+                    <span class="section-title--accent">am I?</span>
+                p Nulla Lorem mollit cupidatat irure. Laborum magna nulla duis ullamco cillum dolor. Voluptate exercitation incididunt aliquip deserunt reprehenderit elit laborum. 
+                p Aliqua id fugiat nostrud irure ex duis ea quis id quis ad et. Sunt qui esse pariatur duis deserunt mollit dolore cillum minim tempor enim. Elit aute irure tempor cupidatat incididunt sint deserunt ut voluptate aute id deserunt nisi.
+            .about-container--decoration-big
+            .about-container--networks
+                .about-container--networks--line
+                .about-container--networks--icons
+                    img(src="../assets/images/github.svg", alt="Github icon")
+                    img(src="../assets/images/behance.svg", alt="Behance icon")
+                    img(src="../assets/images/instagram.svg", alt="Instagram icon")
+                    img(src="../assets/images/twitter.svg", alt="Twitter icon")
+        section.projects 
+            .projects-container
+                h2.section-title 
+                    | Recent <br>
+                    <span class="section-title--accent">projects</span>
+            .projects-portfolio
+                article.latest-project
+                article.project-1
+                article.project-2
+                article.project-3
+                article.project-4
+        section.skills
+            h2.section-title 
+                | What <br>
+                <span class="section-title--accent">I know</span>
+            .skills-container
+                +skills("html", 1, 93)
+                +skills("css", 2, 88)
+                +skills("pug", 3, 72)
+                +skills("sass", 4, 85)
+                +skills("javascript", 5, 52)
+                +skills("wordpress", 6, 77)
+                +skills("github", 7, 63)
+                +skills("figma", 8, 80)
+                +skills("photoshop", 9, 76)
+                +skills("illustrator", 10, 70)

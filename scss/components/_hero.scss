@@ -1,0 +1,18 @@
+.intro-title {
+    max-width:90%;
+    margin: 0 auto;
+    font-family:$font-main;
+    font-weight:$fw-semibold;
+    font-size:$h1;
+    color: $secondary-color-050;
+    line-height:$lh-h1;
+    margin-top: 56px;
+
+    &--accent {
+        color:$secondary-color-500;
+    }
+
+    &--remark {
+        font-weight:$fw-extrabold;
+    }
+}
