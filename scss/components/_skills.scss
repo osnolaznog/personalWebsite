@@ -1,20 +1,23 @@
 .skills{
+    margin-top:72px;
+
     h2 {
         @include section-titles;
+        padding: 0 5%;
     }
-    
+
    .skills-container {
             width: 90%;
-            margin: 0 auto;
-            display: grid; 
-            grid-template-rows: repeat(4, 0.8fr 0.2fr);
+            margin: 32px auto 0;
+            display: grid;
             grid-template-columns: 50% 50%; 
             gap: 0px 16px; 
             grid-template-areas: 
             "skill-1 skill-2"
             "skill-3 skill-4"
             "skill-5 skill-6"
-            "skill-7 skill-8"; 
+            "skill-7 skill-8" 
+            "skill-9 skill-10"; 
             align-items: center;
 
             .skill {

@@ -29,105 +29,107 @@
         }
     }
 } */
-.about {
-    width: 90%;
-    margin: 28px auto 0;
-    position:relative;
-    display: grid; 
-    grid-template-columns: repeat(6, 1fr); 
-    grid-template-rows: repeat(2, 80px) 278px repeat(2, 80px) 1fr 0.5fr;
-    gap: 0px 12px; 
-    
-    &-container--decoration-empty {
-        background-image:url('../assets/images/empty-circles.svg');
-        background-position: top right;
-        background-repeat:no-repeat;
-        background-size:contain;
-        grid-area: 1 / 4 / 3 / 7; 
-    }
 
-    &-picture {
-        display:flex;
-        justify-content:flex-start;
-        box-shadow: $fx-elevation-04;
-        grid-area: 2 / 1 / 5 / 6;
-        width:278px;
-        height: 438px;
+.about{
+    width:100%;
+    background-image:url('../assets/images/big-circles.svg');
+    background-repeat:no-repeat;
+    background-size: calc(375px / 2);
+    background-position-x: right;
+    background-position-y: bottom;
+    padding-bottom:136px;
 
-        img {
-            border-radius:8px;
-            object-fit:cover;
-            z-index:5;
-        }
-    }
-
-    &-bio--container {
-        background: linear-gradient(0deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.08)),
-        linear-gradient(0deg, rgba(0, 35, 41, 0.5), rgba(0, 35, 41, 0.5));
-        backdrop-filter: blur(8px);
-        box-shadow:$fx-elevation-08;
-        border-radius:8px;
-        border-top:5px solid $primary-color-500;
-        z-index:10;
-        grid-area: 4 / 2 / 7 / 7;
-        padding: 32px 20px;
-
-        h2 {
-            @include section-titles;
-        }
-
-        p {
-            font-family: $font-secondary;
-            font-size: $body;
-            line-height:$lh-body;
-            font-weight: $fw-regular;
-            color:$primary-color-100;
-            margin-top:32px;
-
-        }
-    }
-
-    &-container--decoration-big{
-        background-image:url('../assets/images/big-circles.svg');
-        background-repeat:no-repeat;
-        transform: translate(20px, 60px);
-        grid-area: 6 / 4 / 8 / 7;
-        filter: drop-shadow(0px 1px 5px $shadow-key-umbra), drop-shadow(0px 2px 2px $shadow-key-penumbra), drop-shadow(0px 3px 1px $shadow-ambient-shadow);
-    }
-
-    &-container--networks{
+    .about-container {
+        width: 90%;
+        margin: 28px auto 0;
+        position:relative;
         display: grid; 
-        grid-template-columns: repeat(4, 1fr); 
-        grid-template-rows: 0.1fr 0.5fr 0.1fr 1fr; 
-        gap: 0px 0px; 
-        grid-template-areas: 
-        ". . . ."
-        ". line . ."
-        ". . . ."
-        ". icons icons ."; 
-        grid-area: 5 / 1 / 7 / 2; 
+        grid-template-columns: repeat(6, 1fr); 
+        grid-template-rows: repeat(2, 80px) 278px repeat(2, 80px) 1fr;
+        gap: 0px 12px; 
 
-
-        &--line{
-            grid-area: line;
-            border-right: 3px solid $terciary-color-300;
-            
+        &--decoration-empty {
+            background-image:url('../assets/images/empty-circles.svg');
+            background-position: top right;
+            background-repeat:no-repeat;
+            background-size:contain;
+            grid-area: 1 / 4 / 3 / 7; 
         }
 
-        &--icons {
-            grid-area: icons;
+        &--picture {
             display:flex;
-            flex-direction:column;
-            align-items:center;
-            justify-content:space-between;
+            justify-content:flex-start;
+            box-shadow: $fx-elevation-04;
+            grid-area: 2 / 1 / 5 / 6;
+            width:278px;
+            height: 438px;
 
             img {
-                min-width:32px;
+                border-radius:8px;
+                object-fit:cover;
+                z-index:5;
+            }
+        }
+
+        &--bio {
+            background: linear-gradient(0deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.08)),
+            linear-gradient(0deg, rgba(0, 35, 41, 0.5), rgba(0, 35, 41, 0.5));
+            backdrop-filter: blur(8px);
+            box-shadow:$fx-elevation-08;
+            border-radius:8px;
+            border-top:5px solid $primary-color-500;
+            z-index:10;
+            grid-area: 4 / 2 / 7 / 7;
+            padding: 32px 20px;
+
+            h2 {
+                @include section-titles;
+            }
+
+            p {
+                font-family: $font-secondary;
+                font-size: $body;
+                line-height:$lh-body;
+                font-weight: $fw-regular;
+                color:$primary-color-100;
+                margin-top:32px;
+
+            }
+        }
+
+        &--networks{
+            display: grid; 
+            grid-template-columns: repeat(4, 1fr); 
+            grid-template-rows: 0.1fr 0.5fr 0.1fr 1fr; 
+            gap: 0px 0px; 
+            grid-template-areas: 
+            ". . . ."
+            ". line . ."
+            ". . . ."
+            ". icons icons ."; 
+            grid-area: 5 / 1 / 7 / 2; 
+
+
+            &--line{
+                grid-area: line;
+                border-right: 3px solid $terciary-color-300;
+                
+            }
+
+            &--icons {
+                grid-area: icons;
+                display:flex;
+                flex-direction:column;
+                align-items:center;
+                justify-content:space-between;
+
+                img {
+                    min-width:32px;
+                }
             }
         }
     }
 }
-
 
 
 

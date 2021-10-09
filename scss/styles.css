@@ -102,22 +102,31 @@ header nav ul li a {
     }
 } */
 .about {
+  width: 100%;
+  background-image: url("../assets/images/big-circles.svg");
+  background-repeat: no-repeat;
+  background-size: calc(375px / 2);
+  background-position-x: right;
+  background-position-y: bottom;
+  padding-bottom: 136px;
+}
+.about .about-container {
   width: 90%;
   margin: 28px auto 0;
   position: relative;
   display: grid;
   grid-template-columns: repeat(6, 1fr);
-  grid-template-rows: repeat(2, 80px) 278px repeat(2, 80px) 1fr 0.5fr;
+  grid-template-rows: repeat(2, 80px) 278px repeat(2, 80px) 1fr;
   gap: 0px 12px;
 }
-.about-container--decoration-empty {
+.about .about-container--decoration-empty {
   background-image: url("../assets/images/empty-circles.svg");
   background-position: top right;
   background-repeat: no-repeat;
   background-size: contain;
   grid-area: 1/4/3/7;
 }
-.about-picture {
+.about .about-container--picture {
   display: flex;
   justify-content: flex-start;
   box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.2), 0px 4px 5px 0px rgba(0, 0, 0, 0.14), 0px 1px 10px 0px rgba(0, 0, 0, 0.12);
@@ -125,13 +134,13 @@ header nav ul li a {
   width: 278px;
   height: 438px;
 }
-.about-picture img {
+.about .about-container--picture img {
   border-radius: 8px;
   -o-object-fit: cover;
      object-fit: cover;
   z-index: 5;
 }
-.about-bio--container {
+.about .about-container--bio {
   background: linear-gradient(0deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.08)), linear-gradient(0deg, rgba(0, 35, 41, 0.5), rgba(0, 35, 41, 0.5));
   -webkit-backdrop-filter: blur(8px);
           backdrop-filter: blur(8px);
@@ -142,18 +151,18 @@ header nav ul li a {
   grid-area: 4/2/7/7;
   padding: 32px 20px;
 }
-.about-bio--container h2 {
+.about .about-container--bio h2 {
   font-family: "Poppins", sans-serif;
   font-size: 5.5rem;
   text-transform: lowercase;
   line-height: 5rem;
   color: #FEE7F1;
 }
-.about-bio--container h2 .section-title--accent {
+.about .about-container--bio h2 .section-title--accent {
   color: #F61379;
   padding-left: 48px;
 }
-.about-bio--container p {
+.about .about-container--bio p {
   font-family: "Nunito", sans-serif;
   font-size: 1.4rem;
   line-height: 2rem;
@@ -161,14 +170,7 @@ header nav ul li a {
   color: #EBFAFA;
   margin-top: 32px;
 }
-.about-container--decoration-big {
-  background-image: url("../assets/images/big-circles.svg");
-  background-repeat: no-repeat;
-  transform: translate(20px, 60px);
-  grid-area: 6/4/8/7;
-  filter: drop-shadow(0px 1px 5px rgba(0, 0, 0, 0.2)), drop-shadow(0px 2px 2px rgba(0, 0, 0, 0.14)), drop-shadow(0px 3px 1px rgba(0, 0, 0, 0.12));
-}
-.about-container--networks {
+.about .about-container--networks {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: 0.1fr 0.5fr 0.1fr 1fr;
@@ -176,18 +178,18 @@ header nav ul li a {
   grid-template-areas: ". . . ." ". line . ." ". . . ." ". icons icons .";
   grid-area: 5/1/7/2;
 }
-.about-container--networks--line {
+.about .about-container--networks--line {
   grid-area: line;
   border-right: 3px solid #FCE06F;
 }
-.about-container--networks--icons {
+.about .about-container--networks--icons {
   grid-area: icons;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
 }
-.about-container--networks--icons img {
+.about .about-container--networks--icons img {
   min-width: 32px;
 }
 
@@ -197,7 +199,7 @@ header nav ul li a {
   background-position-y: bottom;
   background-repeat: no-repeat;
   background-size: 162px;
-  padding-bottom: 56px;
+  padding-bottom: 64px;
 }
 .projects-container {
   width: 90%;
@@ -248,12 +250,16 @@ header nav ul li a {
   grid-area: project-4;
 }
 
+.skills {
+  margin-top: 72px;
+}
 .skills h2 {
   font-family: "Poppins", sans-serif;
   font-size: 5.5rem;
   text-transform: lowercase;
   line-height: 5rem;
   color: #FEE7F1;
+  padding: 0 5%;
 }
 .skills h2 .section-title--accent {
   color: #F61379;
@@ -263,10 +269,9 @@ header nav ul li a {
   width: 90%;
   margin: 0 auto;
   display: grid;
-  grid-template-rows: repeat(4, 0.8fr 0.2fr);
   grid-template-columns: 50% 50%;
   gap: 0px 16px;
-  grid-template-areas: "skill-1 skill-2" "skill-3 skill-4" "skill-5 skill-6" "skill-7 skill-8";
+  grid-template-areas: "skill-1 skill-2" "skill-3 skill-4" "skill-5 skill-6" "skill-7 skill-8" "skill-9 skill-10";
   align-items: center;
 }
 .skills .skills-container .skill {
