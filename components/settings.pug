@@ -5,7 +5,7 @@ mixin skills (skillName, skillNumber, percentage)
     div(class=[`skill skill-${skillNumber}`])
         svg(class=[`radial-progress logo-${skillNumber}`], data-percentage= percentage, viewBox="0 0 80 80")
             circle.incomplete(cx="40", cy="40", r="35") 
-            circle.complete(cx="40", cy="40", r="35", style="stroke-dashoffset: 39.58406743523136;")
+            circle.complete(cx="40", cy="40", r="35")
         img(src='../assets/icons/skills-'+skillName+'.svg')(class=[`logo-${skillNumber}`])
         
         div(class=[`label label-${skillNumber}`])

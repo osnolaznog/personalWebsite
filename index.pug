@@ -11,7 +11,7 @@ block content
         section.about
             .about-container
                 .about-container--decoration-empty
-                .about-container--picture
+                figure.about-container--picture
                     img(src="../assets/images/profile-picture.webp")
                 .about-container--bio
                     h2.section-title  
@@ -53,3 +53,34 @@ block content
                 +skills("figma", 8, 80)
                 +skills("photoshop", 9, 76)
                 +skills("illustrator", 10, 70)
+
+        section.contact 
+            .contact-container--title
+                h2.section-title 
+                    | Let's work <br>
+                    <span class="section-title--accent">together!</span>
+            .contact-container--form
+                form(action="/", method="post").form
+                    .form-input
+                        label(for="name") Name
+                        .form-input--name
+                            i.form-input--name-icon.form-icon.fas.fa-user                      
+                            input(type="text", name="name", id="name", autocomplete="name",   inputmode="text", required="required", placeholder="Jane Doe")
+                    .form-input
+                        label(for="email") Email
+                        .form-input--email
+                            i.form-input--email-icon.form-icon.fas.fa-at
+                            input(type="email", name="email", id="email", autocomplete="email",  inputmode="email", required="required", placeholder="jane@doe.com")
+                            
+                    .form-input                        
+                        label(for="phone") Phone
+                        .form-input--phone
+                            i.form-input--phone-icon.form-icon.fas.fa-phone-alt 
+                            input(type="text", inputmode="decimal", pattern="\d+", name="phone", id="phone", placeholder="" )
+                                              
+                    .form-input
+                        label(for="message") Message 
+                        .form-input--message
+                            textarea(name="message", id="message" cols="30", rows="10", placeholder="Tell me about your project")
+                                         
+                    

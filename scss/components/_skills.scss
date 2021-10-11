@@ -19,6 +19,8 @@
             "skill-7 skill-8" 
             "skill-9 skill-10"; 
             align-items: center;
+            justify-items: center;
+            justify-content: center;
 
             .skill {
                 display:grid;
@@ -32,14 +34,13 @@
                     max-width: 200px;
                     transform: rotate(-90deg);
                     width: 100%;
+                    filter: drop-shadow(0px 1px 5px $shadow-key-umbra) drop-shadow(0px 2px 2px $shadow-key-penumbra) drop-shadow(0px 3px 1px $shadow-ambient-shadow);
                 
                     circle {
-                        fill: rgba(0,0,0,0);
-                        stroke: #fff;
+                        fill: transparent;
                         stroke-dashoffset: 219.91148575129; /* Circumference */
                         stroke-width: 10;
                         stroke: $primary-color-500;
-                        filter: drop-shadow(0px 1px 5px rgba(0, 0, 0, 0.2)), drop-shadow(0px 2px 2px rgba(0, 0, 0, 0.14)), drop-shadow(0px 3px 1px rgba(0, 0, 0, 0.12));
                 
                         &.incomplete {
                             opacity: 0.25;
