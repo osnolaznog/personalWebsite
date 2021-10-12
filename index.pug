@@ -14,7 +14,7 @@ block content
                 figure.about-container--picture
                     img(src="../assets/images/profile-picture.webp")
                 .about-container--bio
-                    h2.section-title  
+                    h2.section-title#about-me  
                         | who <br>
                         <span class="section-title--accent">am I?</span>
                     p Nulla Lorem mollit cupidatat irure. Laborum magna nulla duis ullamco cillum dolor. Voluptate exercitation incididunt aliquip deserunt reprehenderit elit laborum. 
@@ -29,7 +29,7 @@ block content
                         img(src="../assets/images/twitter.svg", alt="Twitter icon")
         section.projects 
             .projects-container
-                h2.section-title 
+                h2.section-title#projects 
                     | Recent <br>
                     <span class="section-title--accent">projects</span>
             .projects-portfolio
@@ -54,9 +54,9 @@ block content
                 +skills("photoshop", 9, 76)
                 +skills("illustrator", 10, 70)
 
-        section.contact 
+        section.contact
             .contact-container--title
-                h2.section-title 
+                h2.section-title#contact 
                     | Let's work <br>
                     <span class="section-title--accent">together!</span>
             .contact-container--form
@@ -72,15 +72,17 @@ block content
                             i.form-input--email-icon.form-icon.fas.fa-at
                             input(type="email", name="email", id="email", autocomplete="email",  inputmode="email", required="required", placeholder="jane@doe.com")
                             
+                            
                     .form-input                        
                         label(for="phone") Phone
                         .form-input--phone
                             i.form-input--phone-icon.form-icon.fas.fa-phone-alt 
-                            input(type="text", inputmode="decimal", pattern="\d+", name="phone", id="phone", placeholder="" )
+                            input(type="text", inputmode="decimal", pattern="\d+", name="phone", id="phone", placeholder="+1 (205) 555-5555" )
                                               
                     .form-input
                         label(for="message") Message 
                         .form-input--message
                             textarea(name="message", id="message" cols="30", rows="10", placeholder="Tell me about your project")
-                                         
-                    
+
+                    .form-button-container
+                        input(type="button", value="SEND").submit-button

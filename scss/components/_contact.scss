@@ -19,6 +19,10 @@
         .form {
 
             &-input {
+
+                :hover ~ {
+                    border:2px solid $primary-color-500;
+                }
                 
                 label {
                     display:block;
@@ -42,7 +46,7 @@
                         width:50px;
                         color: $primary-color-100;
                         font-size: 15px;
-                        padding: 10px;
+                        padding: 12px 10px;
                         background:$primary-color-500;
                         transition: 0.3s;
                         text-align:center;
@@ -55,13 +59,42 @@
                         border-radius:0 4px 4px 0;
                         padding: 10px;
                         border: 0;
+                        outline:none;
+                        font-family:$font-secondary;
+                        font-size:$body;
+                        font-weight:$fw-regular;
                     }
 
                     textarea {
                         width:100%;
                         border-radius:4px;
                         padding:10px;
+                        outline:none;
+                        font-family:$font-secondary;
+                        font-size:$body;
+                        font-weight:$fw-regular;
                     }
+                }
+
+            }
+
+            .form-button-container{
+                width:100%;
+                display:flex;
+                justify-content:flex-end;
+                
+                .submit-button{
+                    background:$gradient-main;
+                    box-shadow:$fx-elevation-02;
+                    font-family:$font-main;
+                    font-size:$body;
+                    font-weight:$fw-medium;
+                    color:$primary-color-100;
+                    text-transform:uppercase;
+                    letter-spacing:1.25px;
+                    padding:12px 48px;
+                    border:0;
+                    border-radius:4px;
                 }
             }
         }

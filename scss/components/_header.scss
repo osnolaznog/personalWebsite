@@ -10,7 +10,7 @@ header {
         height:inherit;
 
         ul {
-            width:200px;
+            width:220px;
             height:auto;
             display:flex;
             justify-content:space-between;
@@ -25,6 +25,7 @@ header {
                     text-transform: uppercase;
                     font-family:$font-main;
                     color: $primary-color-100;
+                    font-size: 1.1rem;
                 }
             }
         }
