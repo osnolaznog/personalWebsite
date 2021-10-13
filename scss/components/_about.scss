@@ -13,7 +13,7 @@
         position:relative;
         display: grid; 
         grid-template-columns: repeat(6, 1fr); 
-        grid-template-rows: repeat(2, 80px) 278px repeat(2, 80px) 1fr;
+        grid-template-rows: repeat(11, 1fr); 
         gap: 0px 12px; 
 
         &--decoration-empty {
@@ -21,14 +21,14 @@
             background-position: top right;
             background-repeat:no-repeat;
             background-size:contain;
-            grid-area: 1 / 4 / 3 / 7; 
+            grid-area: 1 / 4 / 3 / 7;  
         }
 
         &--picture {
             display:flex;
             justify-content:flex-start;
             box-shadow: $fx-elevation-04;
-            grid-area: 2 / 1 / 5 / 6;
+            grid-area: 2 / 1 / 8 / 6; 
             width:278px;
             height: 438px;
 
@@ -41,7 +41,7 @@
 
         &--bio {
             @include blurred-container;
-            grid-area: 4 / 2 / 7 / 7;
+            grid-area: 6 / 2 / 12 / 7;;
             
             h2 {
                 @include section-titles;
@@ -68,7 +68,7 @@
             ". line . ."
             ". . . ."
             ". icons icons ."; 
-            grid-area: 5 / 1 / 7 / 2; 
+            grid-area: 8 / 1 / 12 / 2; 
 
 
             &--line{
