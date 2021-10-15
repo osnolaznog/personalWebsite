@@ -1,6 +1,6 @@
 .about{
     width:100%;
-    background-image:url('../assets/images/big-circles.svg');
+    background-image:url('./assets/images/big-circles.svg');
     background-repeat:no-repeat;
     background-size: calc(375px / 2);
     background-position-x: right;
@@ -40,7 +40,7 @@
         }
 
         &--decoration-empty {
-            background-image:url('../assets/images/empty-circles.svg');
+            background-image:url('./assets/images/empty-circles.svg');
             background-position: top right;
             background-repeat:no-repeat;
             background-size:contain;
