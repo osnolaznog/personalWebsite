@@ -22,7 +22,16 @@ body {
     background-image:url('../assets/images/blob.svg');
     background-repeat: no-repeat;
     background-position: top right;
+    overflow-x:clip;
    // @include elevation($bg-elevation-00, $fx-elevation-00);
+    @include media('>=tablet', 'screen') {
+        background-size: 75%;
+   }
+
+   @include media('>=desktop', 'screen'){
+        background-size: 50%;
+    }
+   
 }
 
 
@@ -35,3 +44,8 @@ button {
   cursor: pointer;
 }
 
+.responsive-bl{
+    @include media('>=tablet', 'screen'){
+        display:none;
+    }
+}

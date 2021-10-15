@@ -5,16 +5,39 @@
     background-size: calc(375px / 2);
     background-position-x: right;
     background-position-y: bottom;
+    margin-top:28px;
     padding-bottom:136px;
+    @include media('>=tablet', 'screen'){
+        margin-top:56px;
+    }
+
+    @include media('>=desktop', 'screen'){
+        background-size:230px;
+        padding-bottom:200px;
+        margin-top:72px;
+    }
 
     .about-container {
         width: 90%;
-        margin: 28px auto 0;
+        margin: 0 auto;
         position:relative;
         display: grid; 
-        grid-template-columns: repeat(6, 1fr); 
+        grid-template-columns: repeat(6, 16.66%); 
         grid-template-rows: repeat(11, 1fr); 
         gap: 0px 12px; 
+        @include media('>=tablet', 'screen'){
+            width:80%;
+        }
+
+        @include media('>=desktop', 'screen'){
+            grid-template-columns: repeat(6, 1fr); 
+            grid-template-rows: repeat(8, 1fr); 
+
+        }
+
+        @include media('>=desktop', 'screen'){
+            padding:0 7.5%;
+        }
 
         &--decoration-empty {
             background-image:url('../assets/images/empty-circles.svg');
@@ -22,26 +45,46 @@
             background-repeat:no-repeat;
             background-size:contain;
             grid-area: 1 / 4 / 3 / 7;  
+
+            @include media('>=desktop', 'screen'){
+                transform:translateX(7.5%);
+            }
         }
 
         &--picture {
             display:flex;
             justify-content:flex-start;
-            box-shadow: $fx-elevation-04;
             grid-area: 2 / 1 / 8 / 6; 
-            width:278px;
-            height: 438px;
 
             img {
                 border-radius:8px;
                 object-fit:cover;
                 z-index:5;
+                box-shadow: $fx-elevation-04;
+                width:292px;
+                height: 390px;
+
+                @include media('>=tablet', 'screen'){
+                    width:351px;
+                    height:468px;
+                }
+
             }
         }
 
         &--bio {
             @include blurred-container;
-            grid-area: 6 / 2 / 12 / 7;;
+            grid-area: 6 / 2 / 12 / 6;
+            
+            @include media('>=tablet', 'screen') {
+                grid-area: 6 / 3 / 12 / 7;
+                max-width:90%;
+            }
+
+            @include media('>=desktop', 'screen') {
+                grid-area: 5/3/9/7;
+                
+            }
             
             h2 {
                 @include section-titles;
@@ -55,6 +98,11 @@
                 color:$primary-color-100;
                 margin-top:32px;
 
+                @include media('>=tablet', 'screen') {
+                    font-size: 1.6rem;
+                    line-height:2.7rem;
+                }
+
             }
         }
 
@@ -64,16 +112,38 @@
             grid-template-rows: 0.1fr 0.5fr 0.1fr 1fr; 
             gap: 0px 0px; 
             grid-template-areas: 
-            ". . . ."
+            ". line . ."
             ". line . ."
             ". . . ."
             ". icons icons ."; 
-            grid-area: 8 / 1 / 12 / 2; 
+            grid-area: 7 / 1 / 12 / 2;
 
+            @include media('>=tablet', 'screen') {
+                grid-area: 8 / 1 / 12 / 3;
+            }
+
+            @include media('>=desktop', 'screen'){
+
+                grid-area: 3 / 4 / 5 / 7;
+                display: grid;
+                grid-template-columns: 0.2fr 0.8fr;
+                grid-template-rows: repeat(2, 1fr);
+                gap: 0px 0px;
+                grid-auto-flow: row;
+                grid-template-areas:
+                  "line-h icons"
+                  ". icons";
+            } 
 
             &--line{
                 grid-area: line;
                 border-right: 3px solid $terciary-color-300;
+
+                @include media('>=desktop', 'screen'){
+                    grid-area: line-h;
+                    border-bottom: 3px solid $terciary-color-300;
+                    border-right:0;
+                }
                 
             }
 
@@ -83,6 +153,11 @@
                 flex-direction:column;
                 align-items:center;
                 justify-content:space-between;
+
+                @include media('>=desktop', 'screen'){
+                    flex-direction:row;
+                    justify-content:space-around;
+                }
 
                 img {
                     min-width:32px;

@@ -4,13 +4,17 @@
     h2 {
         @include section-titles;
         padding: 0 5%;
+
+        @include media('>=tablet', 'screen'){
+            padding: 0 15%;
+        }
     }
 
    .skills-container {
             width: 90%;
             margin: 32px auto 0;
             display: grid;
-            grid-template-columns: 50% 50%; 
+            grid-template-columns: repeat(2, 50%); 
             gap: 0px 16px; 
             grid-template-areas: 
             "skill-1 skill-2"
@@ -22,11 +26,30 @@
             justify-items: center;
             justify-content: center;
 
+            @include media('>=tablet', 'screen'){
+                width:80%;
+                padding:0 5%;
+                grid-template-columns: repeat(4, 25%);
+                grid-template-rows: repeat(3, 1fr);
+                grid-template-areas:
+                  "skill-1 skill-2 skill-3 skill-4"
+                  "skill-5 skill-6 skill-7 skill-8"
+                  "skill-9 skill-10 skill-11 skill-12";
+                gap:16px 32px;
+            }
+
+            @include media('>=desktop', 'screen'){
+                margin-top:0;
+            }
+
             .skill {
                 display:grid;
                 align-items:center;
                 justify-items:center;
                 padding: 1.6rem;
+                @include media('>=desktop', 'screen'){
+                    padding: 3.6rem;
+                }
 
 
                 svg.radial-progress {
@@ -54,7 +77,17 @@
 
                 img {
                     max-height: 55px;
-                    max-width:70px
+                    max-width:70px;
+                    
+                    @include media('>=tablet', 'screen'){
+                        max-height:42px;
+                        max-width:53px;
+                    }
+
+                    @include media('>=desktop', 'screen') {
+                        max-height:65px;
+                        max-width: 81px;
+                    }
                 }
 
                 .label {
@@ -66,13 +99,25 @@
                         color: $primary-color-500;
                         font-size: $body;
                         font-weight: $fw-bold;
-                        text-transform:uppercase;    
+                        text-transform:uppercase;
+                        
+                        @include media('>=desktop', 'screen'){
+                            font-size: 1.6rem;
+                            line-height:1.8rem;
+
+                        }
                     }
                 
                     .label-percentage {
                         color:$primary-color-100;
                         font-weight:$fw-bold;
                         font-size: $small;
+
+                        @include media('>=desktop', 'screen') {
+                            font-size:1.4rem;
+                            font-weight:$fw-regular;
+                            line-height:1.6rem;
+                        }
                     }
                 }
             }
@@ -87,5 +132,45 @@
             @include new-skill(8);
             @include new-skill(9);
             @include new-skill(10);
+            @include new-skill(11);
+            @include new-skill(12);
+
+            .skill-9{
+                @include media('>=tablet', 'screen'){
+                    grid-area:skill-10;
+                    grid-template-areas: "logo-10" "label-10"
+                }
+
+                .logo-9{
+                    @include media('>=tablet', 'screen'){
+                        grid-area:logo-10;
+                    }
+                }
+
+                .label-9{
+                    @include media('>=tablet', 'screen'){
+                        grid-area:label-10;
+                    }
+                }
+            }
+
+            .skill-10{
+                @include media('>=tablet', 'screen'){
+                    grid-area:skill-11;
+                    grid-template-areas: "logo-11" "label-11"
+                }
+
+                .logo-10{
+                    @include media('>=tablet', 'screen'){
+                        grid-area:logo-11;
+                    }
+                }
+
+                .label-10{
+                    @include media('>=tablet', 'screen'){
+                        grid-area:label-11;
+                    }
+                }
+            }
     }
 }

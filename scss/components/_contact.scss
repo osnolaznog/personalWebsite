@@ -5,16 +5,38 @@
     background-position-x:right;
     background-position-y: 20px;
     background-repeat: no-repeat;
+    @include media('>=tablet', 'screen'){
+        margin-top:72px;
+        background-size:150px;
+    }
+
+    @include media('>=desktop', 'screen'){
+        background-size:200px;
+    }
 
     h2 {
         @include section-titles;
         padding: 0 5%;
+
+        @include media('>=tablet', 'screen'){
+            padding:0 15%;
+        }
     }
 
     &-container--form{
         width: 90%;
         margin: 32px auto 0;
         @include blurred-container;
+
+        @include media('>=tablet', 'screen'){
+            width:80%;
+        }
+
+        @include media('>=desktop', 'screen') {
+            width: 60%;
+            padding:5%;
+            margin-top:72px;
+        }
 
         .form {
 

@@ -25,7 +25,18 @@
     text-transform:lowercase;
     line-height:$lh-h2;
     color:$secondary-color-050;
+    @include media('>=phone', '<=375px') { 
+        font-size: 4.5rem;
+        line-height: 4rem;
+    }
+    @include media('>=tablet', 'screen') {
+        padding: 0 5%;
+    }
 
+    @include media('>=desktop', 'screen'){
+        font-size:7.5rem;
+        line-height:6.8rem;
+    }
     .section-title--accent {
         color:$secondary-color-500;
         padding-left:48px;

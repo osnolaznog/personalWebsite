@@ -4,6 +4,10 @@ header {
     display:flex;
     justify-content: space-between;
 
+    @include media('>=desktop', 'screen'){
+        padding:20px 5% 0;
+    }
+
     nav {
         display:flex;
         justify-content:flex-end;
@@ -16,6 +20,10 @@ header {
             justify-content:space-between;
             align-items:center;
 
+            @include media('>=desktop', 'screen'){
+                width:400px;
+            }
+
             li {
                 text-decoration: none;
                 list-style: none;
@@ -26,6 +34,10 @@ header {
                     font-family:$font-main;
                     color: $primary-color-100;
                     font-size: 1.1rem;
+
+                    @include media('>=desktop', 'screen'){
+                        font-size:$body;
+                    }
                 }
             }
         }
