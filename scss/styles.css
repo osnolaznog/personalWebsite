@@ -11,7 +11,7 @@ html {
 
 body {
   background: #002329;
-  background-image: url("../assets/images/blob.svg");
+  background-image: url("./assets/images/blob.svg");
   background-repeat: no-repeat;
   background-position: top right;
   overflow-x: clip;
@@ -126,7 +126,7 @@ header nav ul li a {
 
 .about {
   width: 100%;
-  background-image: url("../assets/images/big-circles.svg");
+  background-image: url("./assets/images/big-circles.svg");
   background-repeat: no-repeat;
   background-size: calc(375px / 2);
   background-position-x: right;
@@ -172,7 +172,7 @@ header nav ul li a {
   }
 }
 .about .about-container--decoration-empty {
-  background-image: url("../assets/images/empty-circles.svg");
+  background-image: url("./assets/images/empty-circles.svg");
   background-position: top right;
   background-repeat: no-repeat;
   background-size: contain;
@@ -283,14 +283,14 @@ header nav ul li a {
 }
 @media screen and (min-width: 1024px) {
   .about .about-container--networks {
-    grid-area: 3/4/5/7;
+    grid-area: 3/3/5/6;
     display: grid;
     grid-template-columns: 0.2fr 0.8fr;
     grid-template-rows: repeat(2, 1fr);
     gap: 0px 0px;
     grid-auto-flow: row;
     grid-template-areas: "line-h icons" ". icons";
-    transform: translateX(50px);
+    padding-left: 50px;
   }
 }
 .about .about-container--networks--line {
@@ -808,7 +808,7 @@ header nav ul li a {
 .contact {
   width: 100%;
   margin-top: 136px;
-  background-image: url(../assets/images/circle-stripes.svg);
+  background-image: url(./assets/images/circle-stripes.svg);
   background-position-x: right;
   background-position-y: 20px;
   background-repeat: no-repeat;
