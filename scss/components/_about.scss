@@ -97,6 +97,7 @@
                 font-weight: $fw-regular;
                 color:$primary-color-100;
                 margin-top:32px;
+                text-transform: initial;
 
                 @include media('>=tablet', 'screen') {
                     font-size: 1.6rem;

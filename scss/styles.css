@@ -260,6 +260,7 @@ header nav ul li a {
   font-weight: 400;
   color: #EBFAFA;
   margin-top: 32px;
+  text-transform: initial;
 }
 @media screen and (min-width: 768px) {
   .about .about-container--bio p {
