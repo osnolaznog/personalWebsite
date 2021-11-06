@@ -290,6 +290,7 @@ header nav ul li a {
     gap: 0px 0px;
     grid-auto-flow: row;
     grid-template-areas: "line-h icons" ". icons";
+    transform: translateX(50px);
   }
 }
 .about .about-container--networks--line {

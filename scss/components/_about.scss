@@ -134,6 +134,7 @@
                 grid-template-areas:
                   "line-h icons"
                   ". icons";
+                transform:translateX(50px);
             } 
 
             &--line{
