@@ -1,10 +1,11 @@
 .about{
     width:100%;
-    background-image:url('./assets/images/big-circles.svg');
+    background-image:url('../assets/images/big-circles.svg');
     background-repeat:no-repeat;
     background-size: calc(375px / 2);
     background-position-x: right;
     background-position-y: bottom;
+    overflow-x:hidden;
     margin-top:28px;
     padding-bottom:136px;
     @include media('>=tablet', 'screen'){
@@ -13,6 +14,7 @@
 
     @include media('>=desktop', 'screen'){
         background-size:230px;
+        background-position-x: right;
         padding-bottom:200px;
         margin-top:72px;
     }
@@ -23,10 +25,12 @@
         position:relative;
         display: grid; 
         grid-template-columns: repeat(6, 16.66%); 
-        grid-template-rows: repeat(11, 1fr); 
+        grid-template-rows: repeat(10, 1fr); 
         gap: 0px 12px; 
         @include media('>=tablet', 'screen'){
             width:80%;
+            grid-template-rows: repeat(9, 1fr); 
+
         }
 
         @include media('>=desktop', 'screen'){
@@ -54,7 +58,7 @@
         &--picture {
             display:flex;
             justify-content:flex-start;
-            grid-area: 2 / 1 / 8 / 6; 
+            grid-area: 2 / 1 / 6 / 6; 
 
             img {
                 border-radius:8px;
@@ -65,8 +69,8 @@
                 height: 390px;
 
                 @include media('>=tablet', 'screen'){
-                    width:351px;
-                    height:468px;
+                    width:400px;
+                    height:auto;
                 }
 
             }
@@ -74,10 +78,11 @@
 
         &--bio {
             @include blurred-container;
-            grid-area: 6 / 2 / 12 / 6;
+            grid-area: 5/2/11/6;
+            text-align:center;
             
             @include media('>=tablet', 'screen') {
-                grid-area: 6 / 3 / 12 / 7;
+                grid-area: 5/3/9/7;
                 max-width:90%;
             }
 
@@ -88,6 +93,7 @@
             
             h2 {
                 @include section-titles;
+                text-align:left;
             }
 
             p {
@@ -98,12 +104,30 @@
                 color:$primary-color-100;
                 margin-top:32px;
                 text-transform: initial;
+                text-align:justify;
+                hyphens:auto;
 
-                @include media('>=tablet', 'screen') {
+                 @include media('>=tablet', 'screen') {
                     font-size: 1.6rem;
                     line-height:2.7rem;
                 }
+            }
 
+            a.download-button{
+                display:inline-flex;
+                margin-top:32px;
+                background: linear-gradient(137.08deg, #68B7C0 0%, #58A7B1 19.33%, #4798A2 38.65%, #358994 57.98%, #217A86 77.3%, #026C78 96.63%);
+                box-shadow: 0px 1px 5px 0px rgb(0 0 0 / 20%), 0px 2px 2px 0px rgb(0 0 0 / 14%), 0px 3px 1px -2px rgb(0 0 0 / 12%);
+                font-family: "Poppins", sans-serif;
+                font-size: 1.4rem;
+                font-weight: 500;
+                color: #EBFAFA;
+                text-transform: uppercase;
+                text-decoration: none;
+                letter-spacing: 1.25px;
+                padding: 12px 48px;
+                border: 0;
+                border-radius: 4px;
             }
         }
 
@@ -117,10 +141,10 @@
             ". line . ."
             ". . . ."
             ". icons icons ."; 
-            grid-area: 7 / 1 / 12 / 2;
+            grid-area: 6/1/11/2;
 
             @include media('>=tablet', 'screen') {
-                grid-area: 8 / 1 / 12 / 3;
+                grid-area: 5/1/9/3;
             }
 
             @include media('>=desktop', 'screen'){
@@ -161,8 +185,13 @@
                     justify-content:space-around;
                 }
 
-                img {
-                    min-width:32px;
+                a.icon-social-network {
+                    text-decoration:none;   
+                }
+                a.icon-social-network:before {
+                    
+                    font-size:2.8rem;
+                    color:$terciary-color-300;
                 }
             }
         }

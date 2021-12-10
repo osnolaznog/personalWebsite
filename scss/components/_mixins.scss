@@ -69,3 +69,12 @@
         }
     }
 }
+
+.blurred {
+    filter:blur(8px);
+}
+
+.hidden{
+    display:none;
+    visibility:hidden;
+}

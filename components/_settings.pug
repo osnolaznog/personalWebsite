@@ -11,3 +11,30 @@ mixin skills (skillName, skillNumber, percentage)
         div(class=[`label label-${skillNumber}`])
             p.label-skill= (`${skillName}`)
             //text.label-percentage(x="50%", y="57%", transform="matrix(0, 1, -1, 0, 80, 0)")= percentage+'%'
+
+mixin newProject (projectNumber, projectName, projectSkills, imagePath, projectInfo, projectLink1, socialMediaIcon1, projectIcon1, projectLink2, socialMediaIcon2, projectIcon2, projectLink3, socialMediaIcon3, projectIcon3, projectLink4, socialMediaIcon4, projectIcon4)
+    article(class=[`project project-${projectNumber}`])
+        .project-image 
+            img(src='./assets/images/'+imagePath+'.png', alt=`${projectName}`).project-cover
+        .project-title
+            .project-title-overlay
+                h3= `${projectName}`
+                h4= `${projectSkills}`
+            .project-body 
+                p= projectInfo
+                .project-links
+                    a(href=`${projectLink1}`)(class=[`${socialMediaIcon1}`])(target="_blank" rel="noopener")
+                        span  
+                            i(class=[`${projectIcon1}`])
+                    a(href=`${projectLink2}`)(class=[`${socialMediaIcon2}`])(target="_blank" rel="noopener")
+                        span 
+                            i(class=[`${projectIcon2}`])
+                    a(href=`${projectLink3}`)(class=[`${socialMediaIcon3}`])(target="_blank" rel="noopener")
+                        span 
+                            i(class=[`${projectIcon3}`])
+                    a(href=`${projectLink4}`)(class=[`${socialMediaIcon4}`])(target="_blank" rel="noopener")
+                        span 
+                            i(class=[`${projectIcon4}`])
+        a(aria-labelledby=(`${projectName}`), href="#").project-overlay 
+
+

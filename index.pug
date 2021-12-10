@@ -19,25 +19,129 @@ block content
                         <span class="section-title--accent">am I?</span>
                     p Enquiring mind, versatile and solutions-driven communicator with +8 years leading Network Operations team in ESPN. Improved workflows between Argentina, USA and Mexico and reduced duplicate work hours by 40%.
                     p Over 2 years of experience working as freelance web designer in LUKE. Currently fully transitioning into a Frontend Web Developer role while moving forward in Full Stack Web Development learning path in Platzi.
-                //- .about-container--decoration-big
+                    a(href="./download/resume.pdf" download="Alonso, Gonzalo - Resume.pdf" rel="noopener noreferrer").download-button Download Resume 
                 .about-container--networks
                     .about-container--networks--line
                     .about-container--networks--icons
-                        img(src="./assets/images/github.svg", alt="Github icon")
-                        img(src="./assets/images/behance.svg", alt="Behance icon")
-                        img(src="./assets/images/instagram.svg", alt="Instagram icon")
-                        img(src="./assets/images/twitter.svg", alt="Twitter icon")
+                        a(href="https://www.linkedin.com/in/gonzalonso" target="_blank" rel="noopener").fab.fa-linkedin-in.icon-social-network 
+                        a(href="https://www.behance.net/gonzaloalonso" target="_blank" rel="noopener").fab.fa-behance.icon-social-network 
+                        a(href="https://github.com/osnolaznog" target="_blank" rel="noopener").fab.fa-github.icon-social-network
+                        a(href="https://codepen.io/gonzalonso" target="_blank" rel="noopener").fab.fa-codepen.icon-social-network
         section.projects 
             .projects-container
                 h2.section-title#projects 
                     | Recent <br>
                     <span class="section-title--accent">projects</span>
             .projects-portfolio
-                article.latest-project
-                article.project-1
-                article.project-2
-                article.project-3
-                article.project-4
+                +newProject(
+                    "1", 
+                    "Purple Rain", 
+                    "WordPress", 
+                    "purple-rain", 
+                    "Over 20 illustrators portfolios with multiple filters on a minimalist website based on WordPress.", 
+                    "https://purplerainillustrators.com/", 
+                    "social-media-icon", 
+                    "fas fa-globe", 
+                    "githubLink", 
+                    "hidden", 
+                    "fab fa-github", 
+                    "https://www.behance.net/gallery/131540513/Purple-Rain-Illustrators",
+                    "social-media-icon", 
+                    "fab fa-behance", 
+                    "figmaLink", 
+                    "hidden", 
+                    "fab fa-figma")
+                +newProject(
+                    "2", 
+                    "Trading Mentor", 
+                    "WordPress, WooCommerce", 
+                    "trading-mentor", 
+                    "E-learning & e-commerce platform. Integrated WooCommerce, Learning Dash & Ultimate Member plugins.",
+                    "https://www.tradingmentor.com.au/", 
+                    "social-media-icon", 
+                    "fas fa-globe", 
+                    "githubLink", 
+                    "hidden", 
+                    "fab fa-github", 
+                    "https://www.behance.net/gallery/131605297/Trading-Mentor-Website-Logo",
+                    "social-media-icon", 
+                    "fab fa-behance", 
+                    "figmaLink", 
+                    "hidden", 
+                    "fab fa-figma")
+                +newProject(
+                    "3", 
+                    "Duvep", 
+                    "WordPress, WooCommerce", 
+                    "duvep", 
+                    "E-commerce website based on WordPress. Integrates paygates and shipping plugins for Chile.",
+                    "https://duvep.cl/", 
+                    "social-media-icon", 
+                    "fas fa-globe", 
+                    "githubLink", 
+                    "hidden",  
+                    "fab fa-github", 
+                    "https://www.behance.net/gallery/131543191/Duvep", 
+                    "social-media-icon",
+                    "fab fa-behance", 
+                    "figmaLink", 
+                    "hidden",  
+                    "fab fa-figma")
+                +newProject(
+                    "4", 
+                    "Purple Rain", 
+                    "WordPress", 
+                    "purple-rain", 
+                    "Over 20 illustrators portfolios with multiple filters on a minimalist website based on WordPress.", 
+                    "webLink", 
+                    "social-media-icon", 
+                    "fas fa-globe", 
+                    "githubLink", 
+                    "social-media-icon", 
+                    "fab fa-github", 
+                    "behanceLink", 
+                    "social-media-icon",
+                    "fab fa-behance", 
+                    "figmaLink", 
+                    "social-media-icon",  
+                    "fab fa-figma")
+                +newProject(
+                    "5", 
+                    "Trading Mentor", 
+                    "WordPress, WooCommerce", 
+                    "trading-mentor", 
+                    "E-commerce website based on WordPress. Integrates paygates and shipping plugins for Chile.",
+                    "webLink", 
+                    "social-media-icon", 
+                    "fas fa-globe", 
+                    "githubLink", 
+                    "social-media-icon", 
+                    "fab fa-github", 
+                    "behanceLink", 
+                    "social-media-icon",
+                    "fab fa-behance", 
+                    "figmaLink", 
+                    "hidden",  
+                    "fab fa-figma")
+                +newProject(
+                    "6", 
+                    "Duvep", 
+                    "WordPress, WooCommerce", 
+                    "duvep", 
+                    "E-learning & e-commerce platform. Integrated WooCommerce, Learning Dash & Ultimate Member plugins.",
+                    "webLink", 
+                    "social-media-icon", 
+                    "fas fa-globe", 
+                    "githubLink", 
+                    "social-media-icon", 
+                    "fab fa-github", 
+                    "behanceLink", 
+                    "hidden", 
+                    "fab fa-behance", 
+                    "figmaLink", 
+                    "hidden", 
+                    "fab fa-figma")
+
         section.skills
             h2.section-title 
                 | What <br>
